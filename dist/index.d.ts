@@ -1,0 +1,51 @@
+import * as __async from "./jT_async";
+import * as __array from "./jT_array";
+import * as __date from "./jT_date";
+import * as __file from "./jT_file";
+import * as __string from "./jT_string";
+import * as __EventEmitter from "./EventEmitter";
+declare const _default: {
+    EventEmitter: typeof __EventEmitter.EventEmitter;
+    toTitleCase(str: string): string;
+    toLeet(str: string): string;
+    default: {
+        toTitleCase: typeof __string.toTitleCase;
+        toLeet: typeof __string.toLeet;
+    };
+    randomNumber(min: number, max: number, round?: boolean): number;
+    numberString(len: number): string;
+    alphaString(len: number, includeUpper?: boolean): string;
+    alphaNumbericString(len: number, includeUpper?: boolean): string;
+    chance(percent?: number): boolean;
+    choice<T>(arr: T[], copy?: boolean): T;
+    choiceIndex(arr: any[]): number;
+    choiceWeighted<T extends any[]>(arr: T, path?: string, copy?: boolean): T[number];
+    getProp(obj: {}, path: string): any;
+    sum(arr: number[], path?: string, ignoreNaN?: boolean): number;
+    clamp(num: number, max: number): number;
+    clamp(num: number, range: {
+        min?: number;
+        max: number;
+    }): number;
+    percent(a: number, b: number, round?: boolean): number;
+    secToMs(sec: number, round?: boolean): number;
+    msToSec(ms: number, round?: boolean): number;
+    formatThousands(num: number, sep?: string): string;
+    formatLargeNumber(num: number, units?: [string, string, string]): string;
+    toOrdinal(num: number): string;
+    readDir(path: string, options?: __file.ReadDirOptions): string[];
+    parseTime(str: string | number, options?: __date.ParseTimeOptions): number;
+    eta(unix: number | string, options?: __date.ETAOptions): string | null;
+    etaHMS(unix: number | string, options?: __date.ETAOptions): string | null;
+    etaYMDHMS(unix: number | string, options?: __date.ETAOptions): string | null;
+    etaDigital(unix: number | string, options?: __date.ETAOptions): string | null;
+    chunk<T extends any[]>(arr: T, size: number, copy?: boolean): T[];
+    unique<T extends any[]>(arr: T, prop?: string, copy?: boolean): T;
+    forceArray<T>(item: T, options?: __array.ForceArrayOptions): __array.ForcedArray<T>;
+    betterMap<T extends any[]>(arr: T, callback: __array.BetterMapCallback<T>, copy?: boolean): T;
+    toMap<T extends any[]>(arr: T, callback: __array.ToMapCallback<T>, copy?: boolean): Map<any, any>;
+    sleep(ms: string | number): Promise<void>;
+    LoopInterval: typeof __async.LoopInterval;
+};
+export default _default;
+//# sourceMappingURL=index.d.ts.map

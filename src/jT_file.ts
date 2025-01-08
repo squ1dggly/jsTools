@@ -1,4 +1,9 @@
-import fs from "node:fs";
+import fs from "fs";
+
+export interface ReadDirOptions {
+    /** Return nested files inside of the directory. */
+    recursive?: boolean;
+}
 
 /** Get an array of file paths inside of a folder.
  * @param path The path to the folder.

@@ -1,3 +1,16 @@
+export type AnyListener = (...args: any[]) => any;
+
+export interface MappedEvent {
+    id: string;
+    once: boolean;
+    listener: AnyListener;
+}
+
+export interface RemoveEventFilter {
+    id?: string;
+    index?: number;
+}
+
 export class EventEmitter {
     events: Map<string, MappedEvent[]> = new Map();
 
